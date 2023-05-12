@@ -1,0 +1,8 @@
+[2023-05-12 20:09:32,009: INFO: stage_01_template]: 
+********************
+[2023-05-12 20:09:32,009: INFO: stage_01_template]: >>>>> stage GET DATA started <<<<<
+[2023-05-12 20:09:32,009: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-05-12 20:09:32,009: INFO: common]: created directory at: data
+[2023-05-12 20:09:32,009: INFO: stage_01_template]: data.zip already present at data folder
+[2023-05-12 20:09:32,009: INFO: stage_01_template]: >>>>> stage GET DATA completed!<<<<<
+

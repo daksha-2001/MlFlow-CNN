@@ -3,5 +3,15 @@
 
 data:
   local_dir: data
+  bad_data: bad_data
+  model_dir: models
+  initial_model_file: init_model.h5 
+
+model:
+  input_image: [180,180,3]
+  lr: 0.01
+  loss: sparse_categorical_crossentropy
+  metric: ['accuracy']
+  
  
 

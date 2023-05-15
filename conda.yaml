@@ -62,4 +62,6 @@ dependencies:
     - websocket-client==1.5.1
     - werkzeug==2.2.3
     - zipp==3.15.0
+    - Pillow==9.5.0
+    - Tensorflow==2.11.0
 

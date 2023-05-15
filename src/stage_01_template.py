@@ -3,7 +3,8 @@ import os
 import shutil
 from tqdm import tqdm
 import logging
-from src.utils.common import read_yaml, create_directories
+from src.utils.common import read_yaml, create_directories,extract_data
+from src.utils.Data_mgnt import validation_image
 import random
 
 
@@ -23,6 +24,7 @@ def main(config_path):
     config = read_yaml(config_path)
     
     Local_dir=config['data']['local_dir']
+    bad_data=config['data']['bad_data']
   
     data_file=os.path.join(Local_dir,'data.zip')
     create_directories([Local_dir])
@@ -31,7 +33,15 @@ def main(config_path):
         logging.info(f"data.zip moved to {Local_dir} folder")
     else:
         logging.info(f"data.zip already present at {Local_dir} folder")
-    pass
+
+    if not os.path.exists(os.path.join(Local_dir,"PetImages")):
+        extract_data(data_file,Local_dir)
+    else:
+        logging.info(f'{data_file} already extracted')
+    
+    create_directories([os.path.join(Local_dir,"bad_dir")])
+
+    validation_image(os.path.join(Local_dir,'PetImages'),os.path.join(Local_dir,'bad_dir'))
 
 
 if __name__ == '__main__':

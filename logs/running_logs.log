@@ -1,34 +1,24 @@
-[2023-05-15 12:18:01,220: INFO: main]: 
+[2023-05-16 19:33:45,352: INFO: main]: 
 ********************
-[2023-05-15 12:18:01,220: INFO: main]: >>>>> stage Main Stage started <<<<<
-[2023-05-15 12:18:01,220: ERROR: main]: __enter__
-Traceback (most recent call last):
-  File "src/main.py", line 34, in <module>
-    main()
-  File "src/main.py", line 22, in main
-    with mlflow.start_run as run:
-AttributeError: __enter__
-[2023-05-15 12:18:35,134: INFO: main]: 
+[2023-05-16 19:33:45,352: INFO: main]: >>>>> stage Main Stage started <<<<<
+[2023-05-16 19:33:46,672: INFO: stage_01_template]: 
 ********************
-[2023-05-15 12:18:35,134: INFO: main]: >>>>> stage Main Stage started <<<<<
-[2023-05-15 12:18:36,242: INFO: stage_01_template]: 
-********************
-[2023-05-15 12:18:36,242: INFO: stage_01_template]: >>>>> stage GET DATA started <<<<<
-[2023-05-15 12:18:36,242: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2023-05-15 12:18:36,256: INFO: common]: created directory at: data
-[2023-05-15 12:18:36,256: INFO: stage_01_template]: data.zip already present at data folder
-[2023-05-15 12:18:36,256: INFO: stage_01_template]: data\data.zip already extracted
-[2023-05-15 12:18:36,256: INFO: common]: created directory at: data\bad_dir
-[2023-05-15 12:19:16,975: INFO: Data_mgnt]: All images are verifed successfully
-[2023-05-15 12:20:04,618: INFO: Data_mgnt]: All images are verifed successfully
-[2023-05-15 12:20:04,618: INFO: stage_01_template]: >>>>> stage GET DATA completed!<<<<<
+[2023-05-16 19:33:46,672: INFO: stage_01_template]: >>>>> stage GET DATA started <<<<<
+[2023-05-16 19:33:46,672: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-05-16 19:33:46,672: INFO: common]: created directory at: data
+[2023-05-16 19:33:46,672: INFO: stage_01_template]: data.zip already present at data folder
+[2023-05-16 19:33:46,672: INFO: stage_01_template]: data\data.zip already extracted
+[2023-05-16 19:33:46,672: INFO: common]: created directory at: data\bad_dir
+[2023-05-16 19:34:03,665: INFO: Data_mgnt]: All images are verifed successfully
+[2023-05-16 19:34:29,948: INFO: Data_mgnt]: All images are verifed successfully
+[2023-05-16 19:34:29,948: INFO: stage_01_template]: >>>>> stage GET DATA completed!<<<<<
 
-[2023-05-15 12:20:51,074: INFO: stage_01_Base_Model]: 
+[2023-05-16 19:34:52,170: INFO: stage_01_Base_Model]: 
 ********************
-[2023-05-15 12:20:51,074: INFO: stage_01_Base_Model]: >>>>> stage Base_Model started <<<<<
-[2023-05-15 12:20:51,101: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2023-05-15 12:20:51,101: INFO: stage_01_Base_Model]: Layers defined
-[2023-05-15 12:20:54,242: INFO: stage_01_Base_Model]: Base model summary: 
+[2023-05-16 19:34:52,170: INFO: stage_01_Base_Model]: >>>>> stage Base_Model started <<<<<
+[2023-05-16 19:34:52,172: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-05-16 19:34:52,172: INFO: stage_01_Base_Model]: Layers defined
+[2023-05-16 19:34:53,110: INFO: stage_01_Base_Model]: Base model summary: 
  Model: "sequential"
 _________________________________________________________________
  Layer (type)                Output Shape              Param #   
@@ -55,9 +45,19 @@ Trainable params: 483,514
 Non-trainable params: 0
 _________________________________________________________________
 
-[2023-05-15 12:20:54,302: INFO: common]: created directory at: data\models
-[2023-05-15 12:20:54,871: INFO: stage_01_Base_Model]: Model is saved at data\models\init_model.h5
-[2023-05-15 12:20:54,872: INFO: stage_01_Base_Model]: >>>>> stage Base_Model completed!<<<<<
+[2023-05-16 19:34:53,150: INFO: common]: created directory at: data\models
+[2023-05-16 19:34:53,256: INFO: stage_01_Base_Model]: Model is saved at data\models\init_model.h5
+[2023-05-16 19:34:53,257: INFO: stage_01_Base_Model]: >>>>> stage Base_Model completed!<<<<<
 
-[2023-05-15 12:20:56,305: INFO: main]: >>>>> stage Main Stage completed!<<<<<
+[2023-05-16 19:34:57,895: INFO: stage_01_training]: 
+********************
+[2023-05-16 19:34:57,895: INFO: stage_01_training]: >>>>> stage Training started <<<<<
+[2023-05-16 19:34:57,895: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-05-16 19:34:57,895: INFO: stage_01_training]: Reading dataset from data directory
+[2023-05-16 19:35:02,921: INFO: stage_01_training]: Loading data\models\init_model.h5 model
+[2023-05-16 19:35:03,469: INFO: stage_01_training]: Training started
+[2023-05-16 19:41:24,291: INFO: stage_01_training]: saving data\models\final_model.h5 model
+[2023-05-16 19:41:24,683: INFO: stage_01_training]: >>>>> stage Training completed!<<<<<
+
+[2023-05-16 19:41:26,578: INFO: main]: >>>>> stage Main Stage completed!<<<<<
 

@@ -11,3 +11,6 @@ entry_points:
 
   base_model_creation: 
     command: python src/stage_01_Base_Model.py
+  
+  training_stage: 
+    command: python src/stage_01_training.py
